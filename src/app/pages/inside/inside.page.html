@@ -1,0 +1,53 @@
+<ion-content color="#000" background="#000" fullscreen [class]="'contenido'">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                Donde estas ubicado?
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-select placeholder="Elige tu localidad" [class]="'select'">
+                    <ion-select-option value="f">Female</ion-select-option>
+                    <ion-select-option value="m">Male</ion-select-option>
+                </ion-select>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-select placeholder="Elige tu barrio" [class]="'select'">
+                    <ion-select-option value="f">Female</ion-select-option>
+                    <ion-select-option value="m">Male</ion-select-option>
+                </ion-select>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-button style="--border-radius:0" expand="block" (click)="nextPage()">Buscar comercios</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<!-- <ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="schedule">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Inicio</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="speakers">
+      <ion-icon name="search"></ion-icon>
+      <ion-label>Explorar</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="map">
+      <ion-icon name="gift"></ion-icon>
+      <ion-label>Mis puntos</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="about">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>Perfil</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs> -->

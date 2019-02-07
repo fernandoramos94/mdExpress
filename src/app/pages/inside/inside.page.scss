@@ -1,0 +1,38 @@
+.titulo, .subtitulo{
+    text-align: center;
+    display: block;
+    top:35%;
+    color: #ffffff;
+    position: relative;
+}
+.select-placeholder{
+    opacity: 0 !important;
+    color: #000;
+}
+.contenido{
+    background: #cccccc1a !important;
+}
+ion-select{
+    &.select{
+        padding-right: 0.5em;
+        background: #ffffff;
+        color: #000 !important;
+        --placeholder-color: #000;
+        --opacity: 0;
+    }
+}
+.select .select-placeholder{
+    color: #000 !important;
+    opacity: 0 !important;
+}
+.titulo{
+    font-size: 25px;
+}
+.subtitulo{
+    margin-top: 2px;
+    font-size: 15px;
+}
+.capa{
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
