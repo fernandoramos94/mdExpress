@@ -23,12 +23,11 @@ export class LoginPage implements OnInit {
     });
   }
   storageSession(response:any){
-    
-    let expired_at = (response.expires_in * 1000) + Date.now();
+    // let expired_at = (response.expires_in * 1000) + Date.now();
     this.storage.set('access_token', {
       access_token: response.token,
       refresh_token: response.token,
-      expired_at
+      // expired_at
     })
     this.storage.set('infoUser', {
       data: response.user
@@ -36,6 +35,7 @@ export class LoginPage implements OnInit {
   }
  
   onSubmit() {
+    
     this.authService.login(this.credentialsForm.value).then(res => {
       this.storageSession(res);
       this.authenticationState.next(true);

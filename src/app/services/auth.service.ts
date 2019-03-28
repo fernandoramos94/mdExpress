@@ -1,6 +1,6 @@
 import { Platform, AlertController } from '@ionic/angular';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Storage } from '@ionic/storage';
 import { environment } from '../../environments/environment';
@@ -47,7 +47,15 @@ export class AuthService {
   }
  
   login(credentials) {
-    return this.http.post(`${this.url}/api/login`, credentials).toPromise();
+    let headers = new HttpHeaders();
+    headers.append('Content-Type', 'multipart/form-data');
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
+    let request = {
+      'email': credentials.email,
+      'password': credentials.password,
+    }
+    return this.http.post(`${this.url}/api/login`, request, {headers: headers}).toPromise();
   }
  
   logout() {
